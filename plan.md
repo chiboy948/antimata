@@ -37,7 +37,7 @@ GMX-grade; you can't beat ledger time.
 
 Two Cloudflare Workers, both on `*/1 * * * *`:
 
-- **`so4-oracle`** (Rust Worker, `oracle/src/lib.rs`): fetch Binance/Coinbase/Pyth →
+- **`antimata`** (Rust Worker, `oracle/src/lib.rs`): fetch Binance/Coinbase/Pyth →
   aggregate `min`/`max` → ed25519-sign → serve `GET /prices`. Never submits on-chain.
 - **`keeper`** (TS Worker, `keeper/src/index.ts`): pull `/prices` → build+sign+submit
   `oracle.set_prices` → read pending order/deposit/withdrawal keys from `reader` →
@@ -81,7 +81,7 @@ in `FLOAT_PRECISION = 1e30`, adjusted for token decimals.
 ## 2. Target architecture — one Rust binary
 
 ```
-so4-oracle  (single statically-deployed binary)
+antimata  (single statically-deployed binary)
 │
 ├── main.rs            tokio::main → load Config → build AppState → spawn loops → serve axum
 │

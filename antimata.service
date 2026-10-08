@@ -1,5 +1,5 @@
 [Unit]
-Description=SO4 Oracle Service
+Description=Antimata Oracle Service
 After=network.target
 Wants=network-online.target
 # Restart rate limiting lives in [Unit] (systemd >= 230); the [Service]
@@ -18,15 +18,15 @@ StartLimitBurst=50
 
 [Service]
 Type=simple
-User=oracle
-Group=oracle
-WorkingDirectory=/opt/oracle
-ExecStart=/opt/oracle/oracle
+User=antimata
+Group=antimata
+WorkingDirectory=/opt/antimata
+ExecStart=/opt/antimata/antimata
 Restart=always
 RestartSec=5
 
 # Environment
-EnvironmentFile=/opt/oracle/.env
+EnvironmentFile=/opt/antimata/.env
 
 # Security
 NoNewPrivileges=true
@@ -34,12 +34,12 @@ ProtectSystem=strict
 ProtectHome=true
 # The oracle process never writes to disk (tokens.json is embedded at compile
 # time via include_str!, and EnvironmentFile is read by systemd itself, not
-# the process) — ReadWritePaths=/opt/oracle granted unneeded write access.
+# the process) — ReadWritePaths=/opt/antimata granted unneeded write access.
 
 # Logging
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=so4-oracle
+SyslogIdentifier=antimata
 
 [Install]
 WantedBy=multi-user.target

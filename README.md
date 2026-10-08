@@ -1,6 +1,6 @@
-# so4-oracle
+# antimata
 
-Production Axum service for the SO4.market Soroban oracle and keeper.
+Production Axum service for the Antimata Soroban oracle and keeper.
 
 This repository contains a single Rust binary that runs:
 
@@ -11,7 +11,7 @@ This repository contains a single Rust binary that runs:
 ## Architecture.
 
 ```
-so4-oracle  (single statically-deployed binary)
+antimata  (single statically-deployed binary)
 ├── main.rs            tokio::main → load Config → build AppState → spawn loops → serve axum
 ├── HTTP API (axum + tower-http CORS/trace)
 │     GET /health                      public   liveness
@@ -136,7 +136,7 @@ contributor-facing doc.
 
 ```bash
 # Build the image
-docker build -t so4-oracle .
+docker build -t antimata .
 
 # Run with environment variables
 docker run -p 8080:8080 \
@@ -151,7 +151,7 @@ docker run -p 8080:8080 \
   -e KEEPER_PRIVATE_KEY=<key> \
   -e KEEPER_SECRET_KEY=<secret> \
   -e KEEPER_ACCOUNT_ID=<account> \
-  so4-oracle
+  antimata
 ```
 
 ### Systemd

@@ -74,5 +74,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Price aggregation edge cases
 - Various security improvements
 
-[Unreleased]: https://github.com/SO4-Markets/so4-oracle/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/SO4-Markets/so4-oracle/releases/tag/v0.1.0
+[Unreleased]: https://github.com/SO4-Markets/antimata/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/SO4-Markets/antimata/releases/tag/v0.1.0

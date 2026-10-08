@@ -1,7 +1,7 @@
 # Risk Mechanics — Liquidation, ADL, Insurance Fund
 
 > [!IMPORTANT]
-> **Nothing described in this document is implemented in `so4-oracle`.**
+> **Nothing described in this document is implemented in `antimata`.**
 >
 > This is reference material for the **external SO4 perps Soroban contracts**,
 > which live in a separate repository (the `contracts/` workspace of the SO4

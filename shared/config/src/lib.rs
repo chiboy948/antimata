@@ -1,4 +1,4 @@
-//! Shared token configuration for the so4-oracle workspace.
+//! Shared token configuration for the antimata workspace.
 //!
 //! The oracle Worker consumes `TokenConfig` through `PRICE_FEED_CONFIG`.
 //! `config/tokens.json` remains as a checked-in example for local setup.

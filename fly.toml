@@ -1,4 +1,4 @@
-app = 'so4-oracle'
+app = 'antimata'
 primary_region = 'iad'
 
 [build]
